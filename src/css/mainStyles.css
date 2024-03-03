@@ -104,7 +104,6 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 15px;
   gap: 20px;
 }
 .header__address-clinic {
@@ -122,15 +121,16 @@ body {
 .header__text-city {
   color: #364844;
   font-size: 16px;
+  line-height: 0px;
 }
 .header__text-street {
   color: #868686;
   font-size: 16px;
+  line-height: 0px;
 }
 .header__tel-button-whatsapp {
   display: flex;
   gap: 35px;
-  margin-top: 12px;
 }
 .header__tel-whatsapp {
   display: flex;
@@ -174,11 +174,11 @@ body {
 .info-clinic__text {
   display: flex;
   flex-direction: column;
+  row-gap: 8px;
 }
 .info-clinic__text-h1 {
   width: 416px;
   height: 147px;
-  padding-bottom: 8px;
 }
 .info-clinic__text-h3 {
   width: 367px;
@@ -187,19 +187,31 @@ body {
 
 .clinic-services {
   margin-top: 100px;
+  position: relative;
+  height: 600px;
 }
-.clinic-services__slider-one {
+.clinic-services__slider-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-image: url("../../static/img/Rectangle 33.png");
   width: 613px;
+  position: absolute;
+  opacity: 0;
 }
-.clinic-services__slider-two, .clinic-services__slider-three, .clinic-services__slider-four {
+.clinic-services__slider-item_for-array {
   width: 1140px;
   height: 440px;
-  background-color: darkblue;
-  margin-bottom: 1px;
+  background-color: #808080;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  justify-content: center;
+  font-size: 36px;
+  color: #ffffff;
+}
+.clinic-services__slider-item[data-active] {
+  opacity: 1;
 }
 .clinic-services__info {
   margin-left: 63px;
@@ -219,7 +231,7 @@ body {
   font-weight: 400;
   padding-top: 16px;
   color: #364844;
-  line-height: 32px;
+  line-height: 30px;
 }
 .clinic-services__list-services li::marker {
   color: #1fa181;
@@ -228,7 +240,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding-top: 33px;
+  padding-top: 20px;
 }
 .clinic-services__with-discount {
   font-size: 20px;
@@ -267,6 +279,9 @@ body {
   justify-content: center;
   margin-top: 34px;
   gap: 36px;
+  position: absolute;
+  bottom: 17%;
+  left: 45.6%;
 }
 .clinic-services__prev, .clinic-services__next {
   background: rgba(255, 255, 255, 0);
@@ -292,7 +307,6 @@ body {
 .footer {
   background-color: #08664f;
   height: 144px;
-  margin-top: 92px;
 }
 .footer__item {
   display: flex;
@@ -326,9 +340,6 @@ body {
   .logo {
     width: 75px;
     height: 20px;
-  }
-  svg.logo use {
-    transform: scale(0.7);
   }
   .open {
     display: flex !important;
@@ -386,6 +397,9 @@ body {
   .header__logo-address {
     margin-top: 0px;
     gap: 0px;
+  }
+  .header__logo-mob use {
+    transform: scale(0.7);
   }
   .header__map-icon {
     display: none;
@@ -487,12 +501,22 @@ body {
   .clinic-services {
     margin-top: 49px;
   }
-  .clinic-services__slider-one {
+  .clinic-services__slider-item {
     display: flex;
     align-items: center;
     background-image: url("../../static/img/Rectangle 33.png");
     flex-direction: column-reverse;
-    width: auto;
+    width: 340px;
+  }
+  .clinic-services__slider-item_for-array {
+    height: 536px;
+    background-color: #808080;
+    background-image: none;
+    position: absolute;
+    opacity: 0;
+    justify-content: center;
+    font-size: 36px;
+    color: #ffffff;
   }
   .clinic-services__info {
     margin: 0px 0px 42px 0px;
@@ -548,9 +572,11 @@ body {
   .clinic-services__count {
     margin-top: 22px;
     height: 34px;
+    bottom: 1.4%;
+    left: 27.3%;
   }
   .footer {
-    margin-top: 35px;
+    margin-top: 29px;
     height: 291px;
   }
   .footer__item {

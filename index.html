@@ -18,7 +18,7 @@
                 <span></span>
             </div>
             <div class="header__logo-address">
-                <svg class="logo">
+                <svg class="logo header__logo-mob">
                     <use href="./static/icons/sprite.svg#logo" />
                 </svg>
 
@@ -91,7 +91,7 @@
         </section>
         <section class="clinic-services center">
             <div class="clinic-services__slider">
-                <div class="clinic-services__slider-one">
+                <div class="clinic-services__slider-item" data-active>
                     <div class="clinic-services__info">
                         <div class="clinic-services__description">
                             <h2 class="text-h2 clinic-services__text-h2">
@@ -141,30 +141,42 @@
                     />
                 </div>
 
-                <div class="clinic-services__slider-two"></div>
-                <div class="clinic-services__slider-three"></div>
-                <div class="clinic-services__slider-four"></div>
+                <div
+                    class="clinic-services__slider-item clinic-services__slider-item_for-array"
+                >
+                    clinic-services 2
+                </div>
+                <div
+                    class="clinic-services__slider-item clinic-services__slider-item_for-array"
+                >
+                    clinic-services 3
+                </div>
+                <div
+                    class="clinic-services__slider-item clinic-services__slider-item_for-array"
+                >
+                    clinic-services 4
+                </div>
             </div>
             <div class="clinic-services__count">
-                <button class="clinic-services__prev">
-                <svg class="prev111 clinic-services__svg-prev">
-                    <use xlink:href="./static/icons/sprite.svg#icon-prev" />
-                    <!-- <path
+                <button class="clinic-services__prev" onclick="prev();">
+                    <svg class="prev111 clinic-services__svg-prev">
+                        <use xlink:href="./static/icons/sprite.svg#icon-prev" />
+                        <!-- <path
                             d="M32.6719 6.90625L4.545 6.90625L9.20433 2.26953C9.72423 1.75208 9.72622 0.911133 9.20878 0.391235C8.69135 -0.128662 7.85037 -0.130615 7.33047 0.386719L0.390762 7.29297C0.390297 7.29333 0.389961 7.29382 0.389565 7.29419C-0.129005 7.81165 -0.130661 8.65527 0.389435 9.17444C0.389893 9.17493 0.390228 9.17529 0.390625 9.17578L7.33035 16.0819C7.85017 16.5992 8.69115 16.5975 9.20865 16.0774C9.72608 15.5576 9.72409 14.7167 9.2042 14.1992L4.545 9.5625L32.6719 9.5625C33.4054 9.5625 34 8.9679 34 8.23438C34 7.50085 33.4054 6.90625 32.6719 6.90625Z"
                             fill="#E1E1E1"
                             fill-opacity="1.000000"
                             fill-rule="nonzero"
                         /> -->
-                </svg>
+                    </svg>
                 </button>
 
                 <div class="clinic-services__slash">
-                    <h3 class="text-h3 clinic-services__count-switching">1</h3>
+                    <h3 class="text-h3 clinic-services__count-switching"></h3>
                     <span class="clinic-services__count-slash"> / </span>
-                    <h3 class="text-h3 clinic-services__count-length">4</h3>
+                    <h3 class="text-h3 clinic-services__count-length"></h3>
                 </div>
 
-                <button class="clinic-services__next">
+                <button class="clinic-services__next" onclick="next();">
                     <svg class="clinic-services__svg-next">
                         <use href="../static/icons/sprite.svg#icon-next" />
                     </svg>
@@ -175,7 +187,10 @@
             <div class="footer__item center">
                 <div class="footer__svg-nav">
                     <svg class="logo footer__logo-mob">
-                        <use href="../static/icons/sprite.svg#logo-footer" />
+                        <use
+                            class="footer__logo-mob"
+                            href="../static/icons/sprite.svg#logo-footer"
+                        />
                     </svg>
                     <div class="footer__nav">
                         <a class="footer__link" href="#">О клинике</a>
@@ -206,6 +221,8 @@
             </div>
         </footer>
 
-        <script src="./src/script/burger/burger.js"></script>
+        <script src="./src/script/burger/burger.js" defer></script>
+        <script src="./src/script/slider/slider.js" defer></script>
+        <script src="./src/script/count/count.js" defer></script>
     </body>
 </html>

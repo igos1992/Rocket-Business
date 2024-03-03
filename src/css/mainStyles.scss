@@ -106,7 +106,6 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 15px;
         gap: 20px;
     }
     &__address-clinic {
@@ -124,15 +123,16 @@ body {
     &__text-city {
         color: #364844;
         font-size: 16px;
+        line-height: 0px;
     }
     &__text-street {
         color: #868686;
         font-size: 16px;
+        line-height: 0px;
     }
     &__tel-button-whatsapp {
         display: flex;
         gap: 35px;
-        margin-top: 12px;
     }
     &__tel-whatsapp {
         display: flex;
@@ -176,11 +176,11 @@ body {
     &__text {
         display: flex;
         flex-direction: column;
+        row-gap: 8px;
     }
     &__text-h1 {
         width: 416px;
         height: 147px;
-        padding-bottom: 8px;
     }
     &__text-h3 {
         width: 367px;
@@ -190,22 +190,37 @@ body {
 
 .clinic-services {
     margin-top: 100px;
-    &__slider-one {
+    position: relative;
+    height: 600px;
+    &__slider-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         // background-color: #e2f0ef;
         background-image: url('../../static/img/Rectangle\ 33.png');
         width: 613px;
+        position: absolute;
+        opacity: 0;
     }
-    &__slider-two,
-    &__slider-three,
-    &__slider-four {
-        width: 1140px;
-        height: 440px;
-        background-color: darkblue;
-        margin-bottom: 1px;
+    &__slider-item {
+        &_for-array {
+            width: 1140px;
+            height: 440px;
+            background-color: #808080;
+            background-image: none;
+            position: absolute;
+            opacity: 0;
+            justify-content: center;
+            font-size: 36px;
+            color: #ffffff;
+        }
     }
+
+    &__slider-item[data-active] {
+        opacity: 1;
+        // z-index: 1;
+    }
+
     &__info {
         margin-left: 63px;
     }
@@ -225,7 +240,7 @@ body {
         font-weight: 400;
         padding-top: 16px;
         color: #364844;
-        line-height: 32px;
+        line-height: 30px;
     }
     &__list-services li::marker {
         color: #1fa181;
@@ -234,7 +249,7 @@ body {
         display: flex;
         align-items: center;
         gap: 16px;
-        padding-top: 33px;
+        padding-top: 20px;
     }
     &__with-discount {
         font-size: 20px;
@@ -275,6 +290,9 @@ body {
         justify-content: center;
         margin-top: 34px;
         gap: 36px;
+        position: absolute;
+        bottom: 17%;
+        left: 45.6%;
     }
     &__prev,
     &__next {
@@ -305,7 +323,7 @@ body {
 .footer {
     background-color: #08664f;
     height: 144px;
-    margin-top: 92px;
+
     &__item {
         display: flex;
         justify-content: space-between;
