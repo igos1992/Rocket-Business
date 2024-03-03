@@ -1,0 +1,295 @@
+@media (min-width: 375px) and (max-width: 768px) {
+    .logo {
+        width: 75px;
+        height: 20px;
+    }
+
+    svg.logo use {
+        transform: scale(0.7);
+    }
+    // .prev111 {
+    //     fill: #0dbc91;
+    // }
+
+    .open {
+        display: flex !important;
+    }
+
+    .center {
+        padding-left: calc(50% - 170px);
+        padding-right: calc(50% - 170px);
+    }
+
+    .header {
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+
+        &__burger {
+            display: flex;
+            position: relative;
+            z-index: 50;
+            align-items: center;
+            justify-content: flex-end;
+            width: 37px;
+            height: 26px;
+            cursor: pointer;
+        }
+        &__burger span {
+            height: 4px;
+            width: 100%;
+            transform: scale(1);
+            background-color: #1fa181;
+        }
+        &__burger::before,
+        &__burger::after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: #1fa181;
+            transition: all 0.3s ease 0s;
+        }
+        &__burger::before {
+            top: 0;
+        }
+        &__burger::after {
+            bottom: 0;
+        }
+        &__burger.active span {
+            transform: scale(0);
+        }
+        &__burger.active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0, -50%);
+        }
+        &__burger.active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+        }
+
+        &__logo-address {
+            margin-top: 0px;
+            gap: 0px;
+        }
+        &__map-icon {
+            display: none;
+        }
+        &__text-street {
+            display: none;
+        }
+        &__text-city {
+            font-size: 13px;
+            font-weight: 400;
+        }
+        &__img {
+            display: none;
+        }
+        &__button {
+            display: none;
+        }
+        &__address {
+            display: none;
+        }
+        &__tel-button-whatsapp {
+            width: 140px;
+            margin-top: 0px;
+        }
+        &__tel-whatsapp {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0px;
+        }
+        &__tel-clinic {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        &__text-city-mob {
+            display: inline;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 65px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow: auto;
+        padding: 48px 0px;
+        background-color: #45927fe6;
+        animation: burgerAnimation 0.7s;
+        &__link {
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: flex-start;
+            line-height: 24px;
+        }
+        &__button {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-top: 29px;
+            background-color: rgba(255, 255, 255, 1);
+            color: #1fa181;
+            animation: burgerAnimation 0.7s;
+        }
+    }
+
+    .info-clinic {
+        height: 549px;
+        &__item {
+            display: flex;
+            align-items: normal;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+        }
+        &__text {
+            padding-left: calc(50% - 170px);
+            padding-right: calc(50% - 170px);
+        }
+        &__text-h1 {
+            font-size: 26px;
+            font-weight: 700;
+            padding: 37px 0px 9px 0px;
+            width: 267px;
+        }
+        &__text-h3 {
+            font-size: 14px;
+            font-weight: 400;
+            width: 340px;
+        }
+        &__img {
+            height: 288px;
+        }
+    }
+
+    .clinic-services {
+        margin-top: 49px;
+        &__slider-one {
+            display: flex;
+            align-items: center;
+            background-image: url('../../static/img/Rectangle 33.png');
+            flex-direction: column-reverse;
+            width: auto;
+        }
+        &__info {
+            margin: 0px 0px 42px 0px;
+        }
+        &__description {
+            margin-top: 20px;
+            padding-left: 23px;
+        }
+        &__text-h2 {
+            font-size: 26px;
+        }
+        &__gender {
+            font-size: 14px;
+            padding-top: 9px;
+        }
+        &__list-services {
+            list-style-position: outside;
+            margin-left: 16px;
+            line-height: 2;
+        }
+        &__li {
+            line-height: 1.5;
+        }
+        &__price {
+            padding-top: 17px;
+        }
+        &__with-discount {
+            font-size: 18px;
+        }
+        &__without-discount {
+            font-size: 14px;
+        }
+        &__button {
+            gap: 6px;
+            margin-top: 0px;
+            justify-content: center;
+        }
+        &__button-mob {
+            width: 137px;
+            height: 43px;
+            font-size: 14px;
+        }
+        &__transparent {
+            width: 137px;
+            height: 43px;
+            font-size: 14px;
+        }
+
+        &__img {
+            z-index: 0;
+            width: 340px;
+            height: 169px;
+        }
+        &__count {
+            margin-top: 22px;
+            height: 34px;
+        }
+        // &__svg-prev {
+        //     // stroke: #0dbc91;
+        //     // fill: #0dbc91;
+        //     background-color: black;
+        //     fill: #0dbc91;
+        //     transition: fill 0.3s ease-in-out;
+        // }
+    }
+
+    .footer {
+        margin-top: 35px;
+        height: 291px;
+        &__item {
+            padding-top: 42px;
+            align-items: flex-start;
+        }
+        &__svg-nav {
+            flex-direction: column;
+        }
+
+        &__logo-mob {
+            width: 95px;
+            height: 27px;
+            transform: scale(1);
+        }
+        &__logo-mob use {
+            transform: scale(1);
+        }
+        &__nav {
+            margin-left: 0px;
+            margin-top: 31px;
+            gap: 15px;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        &__link {
+            font-size: 14px;
+        }
+        &__messengers {
+            gap: 20px;
+        }
+        &__img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    @keyframes burgerAnimation {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}

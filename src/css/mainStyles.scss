@@ -1,0 +1,338 @@
+/* stylelint-disable prettier/prettier */
+
+$font-family: PT Sans Caption;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    font-family: 'PT Sans Caption';
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.center-left {
+    padding-left: calc(50% - 570px);
+}
+
+.logo {
+    width: 92px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.button {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    width: 196px;
+    height: 43px;
+    border-radius: 50px;
+    background-color: #0dbc91;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: all 1.5s ease;
+}
+
+.button:hover {
+    background-color: #00d29f;
+}
+
+.text-h1 {
+    font-family: $font-family;
+    font-size: 36px;
+    font-weight: 700;
+    color: #364844;
+}
+
+.text-h2 {
+    font-family: $font-family;
+    font-size: 38px;
+    font-weight: 700;
+    color: #364844;
+}
+
+.text-h3 {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+    color: #364844;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    position: sticky;
+    top: -1px;
+    background-color: #ffffff;
+    &__burger {
+        display: none;
+    }
+    &__logo-address {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 15px;
+        gap: 20px;
+    }
+    &__address-clinic {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__map-icon {
+        width: 20px;
+        height: 20px;
+    }
+    &__address {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text-city {
+        color: #364844;
+        font-size: 16px;
+    }
+    &__text-street {
+        color: #868686;
+        font-size: 16px;
+    }
+    &__tel-button-whatsapp {
+        display: flex;
+        gap: 35px;
+        margin-top: 12px;
+    }
+    &__tel-whatsapp {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+    &__text-city-mob {
+        display: none;
+    }
+    &__tel-clinic {
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.nav-menu {
+    background-color: #1fa181;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    &__link {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    &__button {
+        display: none;
+    }
+}
+
+.info-clinic {
+    height: 533px;
+    background-color: #f8fbfa;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1560px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text-h1 {
+        width: 416px;
+        height: 147px;
+        padding-bottom: 8px;
+    }
+    &__text-h3 {
+        width: 367px;
+        height: 72px;
+    }
+}
+
+.clinic-services {
+    margin-top: 100px;
+    &__slider-one {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: #e2f0ef;
+        background-image: url('../../static/img/Rectangle\ 33.png');
+        width: 613px;
+    }
+    &__slider-two,
+    &__slider-three,
+    &__slider-four {
+        width: 1140px;
+        height: 440px;
+        background-color: darkblue;
+        margin-bottom: 1px;
+    }
+    &__info {
+        margin-left: 63px;
+    }
+    &__description {
+        height: 261px;
+    }
+
+    &__gender {
+        font-family: $font-family;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__list-services {
+        list-style-position: inside;
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 16px;
+        color: #364844;
+        line-height: 32px;
+    }
+    &__list-services li::marker {
+        color: #1fa181;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-top: 33px;
+    }
+    &__with-discount {
+        font-size: 20px;
+        font-weight: 400;
+        color: #364844;
+    }
+    &__without-discount {
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: line-through;
+        color: #868686;
+    }
+    &__button {
+        display: flex;
+        gap: 14px;
+        margin-top: 28px;
+    }
+    &__transparent {
+        background: rgba(255, 255, 255, 0);
+        color: #0dbc91;
+        border: 1px solid rgb(13, 188, 145);
+        transition: all 1.5s ease;
+    }
+
+    &__transparent:hover {
+        background: #0dbc91;
+        color: #ffffff;
+    }
+
+    &__img {
+        z-index: -1;
+        width: 670px;
+        height: 440px;
+    }
+    &__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 34px;
+        gap: 36px;
+    }
+    &__prev,
+    &__next {
+        background: rgba(255, 255, 255, 0);
+        border: none;
+        cursor: pointer;
+    }
+    &__svg-prev,
+    &__svg-next {
+        width: 34px;
+        height: 16px;
+    }
+
+    &__slash {
+        display: flex;
+    }
+    &__count-switching {
+        font-size: 18px;
+        color: #364844;
+    }
+    &__count-slash,
+    &__count-length {
+        font-size: 18px;
+        color: #c0c0c0;
+    }
+}
+
+.footer {
+    background-color: #08664f;
+    height: 144px;
+    margin-top: 92px;
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 59px;
+    }
+    &__svg-nav {
+        display: flex;
+    }
+    &__logo {
+        background-color: #ffffff;
+    }
+    &__nav {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin-left: 234px;
+    }
+    &__messengers {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    &__svg {
+        width: 91px;
+        height: 27px;
+    }
+}
+
+@import './mobile\ \(375px\)/mobile';
