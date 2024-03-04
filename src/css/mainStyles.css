@@ -1,0 +1,656 @@
+/* stylelint-disable prettier/prettier */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.center-left {
+  padding-left: calc(50% - 570px);
+}
+
+.logo {
+  width: 92px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.button {
+  font-family: PT Sans Caption;
+  font-size: 14px;
+  font-weight: 400;
+  width: 196px;
+  height: 43px;
+  border-radius: 50px;
+  background-color: #0dbc91;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 1.5s ease;
+}
+
+.button:hover {
+  background-color: #00d29f;
+}
+
+.text-h1 {
+  font-family: PT Sans Caption;
+  font-size: 36px;
+  font-weight: 700;
+  color: #364844;
+}
+
+.text-h2 {
+  font-family: PT Sans Caption;
+  font-size: 38px;
+  font-weight: 700;
+  color: #364844;
+}
+
+.text-h3 {
+  font-family: PT Sans Caption;
+  font-size: 16px;
+  font-weight: 400;
+  color: #364844;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 67px;
+  position: sticky;
+  top: -1px;
+  background-color: #ffffff;
+}
+.header__burger {
+  display: none;
+}
+.header__logo-address {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.header__address-clinic {
+  display: flex;
+  align-items: flex-start;
+}
+.header__map-icon {
+  width: 20px;
+  height: 20px;
+}
+.header__address {
+  display: flex;
+  flex-direction: column;
+}
+.header__text-city {
+  color: #364844;
+  font-size: 16px;
+  line-height: 0px;
+}
+.header__text-street {
+  color: #868686;
+  font-size: 16px;
+  line-height: 0px;
+}
+.header__tel-button-whatsapp {
+  display: flex;
+  gap: 35px;
+}
+.header__tel-whatsapp {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.header__text-city-mob {
+  display: none;
+}
+.header__tel-clinic {
+  font-family: PT Sans Caption;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-menu {
+  background-color: #1fa181;
+  height: 43px;
+  display: flex;
+  align-items: center;
+}
+.nav-menu__link {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-menu__button {
+  display: none;
+}
+
+.info-clinic {
+  height: 533px;
+  background-color: #f8fbfa;
+}
+.info-clinic__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1560px;
+}
+.info-clinic__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.info-clinic__text-h1 {
+  width: 416px;
+  height: 147px;
+}
+.info-clinic__text-h3 {
+  width: 367px;
+  height: 72px;
+}
+
+.clinic-services {
+  margin-top: 100px;
+  position: relative;
+  height: 600px;
+}
+.clinic-services__slider-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../static/img/Rectangle 33.png");
+  width: 613px;
+  position: absolute;
+  opacity: 0;
+}
+.clinic-services__slider-item_for-array {
+  width: 1140px;
+  height: 440px;
+  background-color: #808080;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  justify-content: center;
+  font-size: 36px;
+  color: #ffffff;
+}
+.clinic-services__slider-item[data-active] {
+  opacity: 1;
+}
+.clinic-services__info {
+  margin-left: 63px;
+}
+.clinic-services__description {
+  height: 261px;
+}
+.clinic-services__gender {
+  font-family: PT Sans Caption;
+  font-size: 22px;
+  font-weight: 700;
+}
+.clinic-services__list-services {
+  list-style-position: inside;
+  font-family: PT Sans Caption;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 16px;
+  color: #364844;
+  line-height: 30px;
+}
+.clinic-services__list-services li::marker {
+  color: #1fa181;
+}
+.clinic-services__price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+.clinic-services__with-discount {
+  font-size: 20px;
+  font-weight: 400;
+  color: #364844;
+}
+.clinic-services__without-discount {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #868686;
+}
+.clinic-services__button {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+.clinic-services__button-mob {
+  z-index: 2;
+}
+.clinic-services__transparent {
+  background: rgba(255, 255, 255, 0);
+  color: #0dbc91;
+  border: 1px solid rgb(13, 188, 145);
+  transition: all 1.5s ease;
+  z-index: 2;
+}
+.clinic-services__transparent:hover {
+  background: #0dbc91;
+  color: #ffffff;
+}
+.clinic-services__img {
+  z-index: -1;
+  width: 670px;
+  height: 440px;
+}
+.clinic-services__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  gap: 36px;
+  position: absolute;
+  bottom: 17%;
+  left: 45.6%;
+}
+.clinic-services__prev, .clinic-services__next {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}
+.clinic-services__svg-prev, .clinic-services__svg-next {
+  width: 34px;
+  height: 16px;
+}
+.clinic-services__slash {
+  display: flex;
+}
+.clinic-services__count-switching {
+  font-size: 18px;
+  color: #364844;
+}
+.clinic-services__count-slash, .clinic-services__count-length {
+  font-size: 18px;
+  color: #c0c0c0;
+}
+
+.footer {
+  background-color: #08664f;
+  height: 144px;
+}
+.footer__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 59px;
+}
+.footer__svg-nav {
+  display: flex;
+}
+.footer__logo {
+  background-color: #ffffff;
+}
+.footer__nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: 234px;
+}
+.footer__messengers {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer__svg {
+  width: 91px;
+  height: 27px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow-y: auto;
+  cursor: pointer;
+  z-index: 51;
+}
+.modal__main {
+  position: relative;
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 16px;
+  padding: 35px;
+  cursor: default;
+}
+.modal__close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .logo {
+    width: 75px;
+    height: 20px;
+  }
+  .open {
+    display: flex !important;
+  }
+  .center {
+    padding-left: calc(50% - 170px);
+    padding-right: calc(50% - 170px);
+  }
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+  }
+  .header__burger {
+    display: flex;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 37px;
+    height: 26px;
+    cursor: pointer;
+  }
+  .header__burger span {
+    height: 4px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #1fa181;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #1fa181;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  .header__burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+  .header__logo-address {
+    margin-top: 0px;
+    gap: 0px;
+  }
+  .header__logo-mob use {
+    transform: scale(0.7);
+  }
+  .header__map-icon {
+    display: none;
+  }
+  .header__text-street {
+    display: none;
+  }
+  .header__text-city {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .header__img {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__address {
+    display: none;
+  }
+  .header__tel-button-whatsapp {
+    width: 140px;
+    margin-top: 0px;
+  }
+  .header__tel-whatsapp {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0px;
+  }
+  .header__tel-clinic {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .header__text-city-mob {
+    display: inline;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow: auto;
+    padding: 48px 0px;
+    background-color: rgba(69, 146, 127, 0.9019607843);
+    animation: burgerAnimation 0.7s;
+  }
+  .nav-menu__link {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+    line-height: 24px;
+  }
+  .nav-menu__button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 29px;
+    background-color: rgb(255, 255, 255);
+    color: #1fa181;
+    animation: burgerAnimation 0.7s;
+  }
+  .info-clinic {
+    height: 549px;
+  }
+  .info-clinic__item {
+    display: flex;
+    align-items: normal;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  .info-clinic__text {
+    padding-left: calc(50% - 170px);
+    padding-right: calc(50% - 170px);
+  }
+  .info-clinic__text-h1 {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 37px 0px 9px 0px;
+    width: 267px;
+  }
+  .info-clinic__text-h3 {
+    font-size: 14px;
+    font-weight: 400;
+    width: 340px;
+  }
+  .info-clinic__img {
+    height: 288px;
+  }
+  .clinic-services {
+    margin-top: 49px;
+  }
+  .clinic-services__slider-item {
+    display: flex;
+    align-items: center;
+    background-image: url("../../static/img/Rectangle 33.png");
+    flex-direction: column-reverse;
+    width: 340px;
+  }
+  .clinic-services__slider-item_for-array {
+    height: 536px;
+    background-color: #808080;
+    background-image: none;
+    position: absolute;
+    opacity: 0;
+    justify-content: center;
+    font-size: 36px;
+    color: #ffffff;
+  }
+  .clinic-services__info {
+    margin: 0px 0px 42px 0px;
+  }
+  .clinic-services__description {
+    margin-top: 20px;
+    padding-left: 23px;
+  }
+  .clinic-services__text-h2 {
+    font-size: 26px;
+  }
+  .clinic-services__gender {
+    font-size: 14px;
+    padding-top: 9px;
+  }
+  .clinic-services__list-services {
+    list-style-position: outside;
+    margin-left: 16px;
+    line-height: 2;
+  }
+  .clinic-services__li {
+    line-height: 1.5;
+  }
+  .clinic-services__price {
+    padding-top: 17px;
+  }
+  .clinic-services__with-discount {
+    font-size: 18px;
+  }
+  .clinic-services__without-discount {
+    font-size: 14px;
+  }
+  .clinic-services__button {
+    gap: 6px;
+    margin-top: 0px;
+    justify-content: center;
+  }
+  .clinic-services__button-mob {
+    width: 137px;
+    height: 43px;
+    font-size: 14px;
+    z-index: 2;
+  }
+  .clinic-services__transparent {
+    width: 137px;
+    height: 43px;
+    font-size: 14px;
+    z-index: 2;
+  }
+  .clinic-services__img {
+    z-index: 0;
+    width: 340px;
+    height: 169px;
+  }
+  .clinic-services__count {
+    margin-top: 22px;
+    height: 34px;
+    bottom: 1.4%;
+    left: 27.3%;
+  }
+  .footer {
+    margin-top: 29px;
+    height: 291px;
+  }
+  .footer__item {
+    padding-top: 42px;
+    align-items: flex-start;
+  }
+  .footer__svg-nav {
+    flex-direction: column;
+  }
+  .footer__logo-mob {
+    width: 95px;
+    height: 27px;
+    transform: scale(1);
+  }
+  .footer__logo-mob use {
+    transform: scale(1);
+  }
+  .footer__nav {
+    margin-left: 0px;
+    margin-top: 31px;
+    gap: 15px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer__link {
+    font-size: 14px;
+  }
+  .footer__messengers {
+    gap: 20px;
+  }
+  .footer__img {
+    width: 24px;
+    height: 24px;
+  }
+  @keyframes burgerAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}/*# sourceMappingURL=mainStyles.css.map */
