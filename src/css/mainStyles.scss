@@ -267,11 +267,15 @@ body {
         gap: 14px;
         margin-top: 28px;
     }
+    &__button-mob {
+        z-index: 2;
+    }
     &__transparent {
         background: rgba(255, 255, 255, 0);
         color: #0dbc91;
         border: 1px solid rgb(13, 188, 145);
         transition: all 1.5s ease;
+        z-index: 2;
     }
 
     &__transparent:hover {
@@ -350,6 +354,34 @@ body {
     &__svg {
         width: 91px;
         height: 27px;
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow-y: auto;
+    cursor: pointer;
+    z-index: 51;
+    &__main {
+        position: relative;
+        max-width: 600px;
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 16px;
+        padding: 35px;
+        cursor: default;
+    }
+    &__close {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 22px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
     }
 }
 

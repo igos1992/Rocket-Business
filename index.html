@@ -53,7 +53,7 @@
                     </h3>
                 </div>
 
-                <button class="button header__button">
+                <button class="button header__button button-modal">
                     Записаться на прием
                 </button>
             </div>
@@ -65,7 +65,7 @@
                 <a href="#">Специалисты</a>
                 <a href="#">Цены</a>
                 <a href="#">Контакты</a>
-                <button class="button nav-menu__button">
+                <button class="button nav-menu__button button-modal">
                     Записаться на прием
                 </button>
             </div>
@@ -126,10 +126,14 @@
                             </div>
                         </div>
                         <div class="clinic-services__button">
-                            <button class="button clinic-services__button-mob">
+                            <button
+                                class="button button-modal clinic-services__button-mob"
+                            >
                                 Записаться
                             </button>
-                            <button class="button clinic-services__transparent">
+                            <button
+                                class="button button-more-detailed clinic-services__transparent"
+                            >
                                 Подробнее
                             </button>
                         </div>
@@ -221,8 +225,32 @@
             </div>
         </footer>
 
+        <div class="modal center make-an-appointment">
+            <div class="modal__main">
+                <div class="modal__container">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Adipisci doloremque quia voluptatum similique et
+                        minima. Esse illum animi quam saepe ratione quasi? Neque
+                        tempore sed rerum, laudantium officia fugiat. Tenetur.
+                    </p>
+                </div>
+                <button class="modal__close">&#10006;</button>
+            </div>
+        </div>
+
+        <div class="modal center more-detailed">
+            <div class="modal__main">
+                <div class="modal__container">
+                    <p>Информация о предоставляемой услуге</p>
+                </div>
+                <button class="modal__close">&#10006;</button>
+            </div>
+        </div>
+
         <script src="./src/script/burger/burger.js" defer></script>
         <script src="./src/script/slider/slider.js" defer></script>
         <script src="./src/script/count/count.js" defer></script>
+        <script src="./src//script/poPups/poPup.js" defer></script>
     </body>
 </html>

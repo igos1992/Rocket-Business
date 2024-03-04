@@ -258,11 +258,15 @@ body {
   gap: 14px;
   margin-top: 28px;
 }
+.clinic-services__button-mob {
+  z-index: 2;
+}
 .clinic-services__transparent {
   background: rgba(255, 255, 255, 0);
   color: #0dbc91;
   border: 1px solid rgb(13, 188, 145);
   transition: all 1.5s ease;
+  z-index: 2;
 }
 .clinic-services__transparent:hover {
   background: #0dbc91;
@@ -334,6 +338,34 @@ body {
 .footer__svg {
   width: 91px;
   height: 27px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow-y: auto;
+  cursor: pointer;
+  z-index: 51;
+}
+.modal__main {
+  position: relative;
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 16px;
+  padding: 35px;
+  cursor: default;
+}
+.modal__close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -558,11 +590,13 @@ body {
     width: 137px;
     height: 43px;
     font-size: 14px;
+    z-index: 2;
   }
   .clinic-services__transparent {
     width: 137px;
     height: 43px;
     font-size: 14px;
+    z-index: 2;
   }
   .clinic-services__img {
     z-index: 0;
